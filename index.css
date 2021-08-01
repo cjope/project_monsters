@@ -1,0 +1,60 @@
+
+img.beholder {
+    display: block;
+    margin: auto;
+    padding: 15px;
+}
+
+#drop {
+    display: block;
+    margin: auto;
+    background-color:slategray;
+    color: white;
+    border-color: rgb(10, 10, 10);
+    border-radius: 2px;
+}
+
+.monster-name {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+}
+
+body {
+    background-color: rgb(33, 34, 36);
+}
+
+.container {
+    display: flex;
+    border-radius: 10px;
+    background-color: rgb(131, 130, 130);
+    padding: 10px;
+    display: flex;
+    align-content: space-between;
+}
+
+.box {
+    min-width: 100px;
+}
+
+.image {
+    min-width: 100px;
+    max-width: 300px;
+    max-height: 300px;
+    flex-grow: 2;
+    border-radius: 5px;    
+}
+
+.traits {
+    padding: 10px;
+    min-width: 100px;
+    flex-grow: 5;
+}
+
+.full-heart, .empty-heart {
+    flex-grow: 1;
+    flex-flow: wrap;
+    cursor: pointer;
+    border-radius: 5px;
+}

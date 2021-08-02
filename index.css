@@ -2,21 +2,38 @@
 img.beholder {
     display: block;
     margin: auto;
-    padding: 15px;
+    padding: 1%;
 }
 
 #drop {
     display: block;
     margin: auto;
-    background-color:slategray;
+    background-color: rgb(131, 130, 130);
     color: white;
     border-color: rgb(10, 10, 10);
-    border-radius: 2px;
+    border-radius: 5px;
+    font-size: large;
+}
+
+#my-monsters {
+    display: block;
+    background-color: rgb(131, 130, 130);
+    color: whitesmoke;
+    margin-left: 10%;
+    margin-right: 10%;
+    min-height: 0;
+    border-radius: 10px;
+    margin-top: 1%;
+    overflow: auto;
+}
+
+h2,h4 {
+    text-align: center;
 }
 
 .monster-name {
     display: inline-block;
-    padding: 10px;
+    padding: 1%;
     cursor: pointer;
     color: white;
 }
@@ -25,21 +42,24 @@ body {
     background-color: rgb(33, 34, 36);
 }
 
+#show-pic {
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+
+}
+
+
 .container {
     display: flex;
     border-radius: 10px;
     background-color: rgb(131, 130, 130);
     padding: 10px;
-    display: flex;
-    align-content: space-between;
-}
-
-.box {
-    min-width: 100px;
 }
 
 .image {
-    min-width: 100px;
+
     max-width: 300px;
     max-height: 300px;
     flex-grow: 2;
@@ -53,8 +73,11 @@ body {
 }
 
 .full-heart, .empty-heart {
+    height: 5%;
+    width: 5%;
     flex-grow: 1;
     flex-flow: wrap;
     cursor: pointer;
     border-radius: 5px;
+    margin: auto;
 }

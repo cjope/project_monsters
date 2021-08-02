@@ -45,6 +45,7 @@ dropList.addEventListener("change",(e) => {
 selected.addEventListener("click",(monsterName) => {
   result = monsterList.find( ({ name }) => name === `${monsterName.srcElement.innerHTML}`) // srcElement is needed but states that it's deprecated - works fine.
   let div = document.createElement("div")
+  // div.className = `container-${result.name}`
   div.className = "container"
   let images = document.createElement("img")
   images.src = result.img_url
@@ -52,27 +53,29 @@ selected.addEventListener("click",(monsterName) => {
   let traits = document.createElement("p")
   traits.innerHTML = result.Traits
   traits.className = "traits"
-  let diceLiker = document.createElement("button")
+  let diceLiker = document.createElement("img")
   diceLiker.className = "empty-heart"
-  diceLiker.innerText= "🤍"
+  diceLiker.src= "pics/dice-unliked.png"
   imageContainer.appendChild(div);
   div.appendChild(images).width = 200
   div.appendChild(traits)
   div.appendChild(diceLiker)
+  imageContainer.append(document.createElement("br"))
 })
 
 //listens for clicks on the like button and changes it back and forth
 imageContainer.addEventListener('click', function (e) {
   if (e.target.classList.contains('empty-heart')) {
-    e.target.innerHTML = "❤️"
+    e.target.src = "pics/dice-liked.png"
     e.target.className = 'full-heart'
   } else {
     if (e.target.classList.contains('full-heart')) {
-        e.target.innerHTML = "🤍"
+        e.target.src = "pics/dice-unliked.png"
         e.target.className = 'empty-heart'
     }
   }
 });
+
 
 
 /*would have liked to add: 

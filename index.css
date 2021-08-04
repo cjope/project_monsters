@@ -19,8 +19,8 @@ img.beholder {
     display: block;
     background-color: rgb(131, 130, 130);
     color: whitesmoke;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 3%;
+    margin-right: 3%;
     min-height: 0;
     border-radius: 10px;
     margin-top: 1%;
@@ -43,8 +43,8 @@ body {
 }
 
 #show-pic {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 3%;
+    margin-right: 3%;
     margin-top: 1%;
     margin-bottom: 1%;
 
@@ -59,22 +59,28 @@ body {
 }
 
 .image {
-
-    max-width: 300px;
-    max-height: 300px;
+    max-width: 30%;
+    max-height: 30%;
+    width: auto;
+    height: auto;
     flex-grow: 2;
-    border-radius: 5px;    
+    border-radius: 5px;
+    margin: auto;
 }
 
-.traits {
+.actions {
     padding: 10px;
     min-width: 100px;
     flex-grow: 5;
 }
 
 .full-heart, .empty-heart {
-    height: 5%;
-    width: 5%;
+    height: 10%;
+    max-width: 10%;
+    max-height: 10%;
+    min-height: 10%;
+    max-height: 10%;
+    width: 10%;
     flex-grow: 1;
     flex-flow: wrap;
     cursor: pointer;

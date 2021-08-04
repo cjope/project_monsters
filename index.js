@@ -41,24 +41,24 @@ dropList.addEventListener("change",(e) => {
     selected.appendChild(li)
 })
 
-//listens to the created list of names and displays a card with a photo, traits, and a like button (which does nothing but change colors). All of this is pulled from the monsterList using the find function and interpolating the selected name by using the innerHTML of the element (it's name in string form). It then creates a <div> element (the container or "card"), which holds three other elements - <img> for the image, <p> for the traits, and <button> for the like button.
+//listens to the created list of names and displays a card with a photo, actions, and a like button (which does nothing but change colors). All of this is pulled from the monsterList using the find function and interpolating the selected name by using the innerHTML of the element (it's name in string form). It then creates a <div> element (the container or "card"), which holds three other elements - <img> for the image, <p> for the traits, and <button> for the like button.
 selected.addEventListener("click",(monsterName) => {
-  result = monsterList.find( ({ name }) => name === `${monsterName.srcElement.innerHTML}`) // srcElement is needed but states that it's deprecated - works fine.
+  result = monsterList.find( ({ name }) => name === `${monsterName.target.innerHTML}`)
   let div = document.createElement("div")
   // div.className = `container-${result.name}`
   div.className = "container"
   let images = document.createElement("img")
   images.src = result.img_url
   images.className = "image"
-  let traits = document.createElement("p")
-  traits.innerHTML = result.Traits
-  traits.className = "traits"
+  let actions = document.createElement("p")
+  actions.innerHTML = result.Actions
+  actions.className = "actions"
   let diceLiker = document.createElement("img")
   diceLiker.className = "empty-heart"
   diceLiker.src= "pics/dice-unliked.png"
   imageContainer.appendChild(div);
   div.appendChild(images).width = 200
-  div.appendChild(traits)
+  div.appendChild(actions)
   div.appendChild(diceLiker)
   imageContainer.append(document.createElement("br"))
 })

@@ -77,9 +77,9 @@ dropMenu.addEventListener("change",(e) => {
   createCard(result)
 })
 
-const beholderCard = document.querySelector(".beholder")
+const beholderImg = document.querySelector(".beholder")
 
-beholderCard.addEventListener("dblclick",() => {
+beholderImg.addEventListener("dblclick",() => {
   bugbearObj = monsterList[58]
   createCard(bugbearObj)
 })

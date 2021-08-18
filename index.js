@@ -26,15 +26,34 @@ const init = () => {
 
 document.addEventListener('DOMContentLoaded', init())
 
-dropMenu.addEventListener("change",(e) => {
-    let li = document.createElement("li")
-    li.className = "monster-name"
-    li.innerHTML = e.target.value
-    selected.appendChild(li)
-})
+// selected.addEventListener("click",(e) => {
+//   result = monsterList.find(({name}) => name === `${e.target.innerHTML}`)
+//   let div = document.createElement("div")
+//   div.className = "container"
+//   let images = document.createElement("img")
+//   images.src = result.img_url
+//   images.className = "image"
+//   let actions = document.createElement("p")
+//   actions.innerHTML = result.Actions
+//   actions.className = "actions"
+//   let diceLiker = document.createElement("img")
+//   diceLiker.className = "empty-heart"
+//   diceLiker.src= "pics/dice-unliked.png"
+//   imageContainer.appendChild(div);
+//   div.appendChild(images)
+//   div.appendChild(actions)
+//   div.appendChild(diceLiker)
+//   imageContainer.append(document.createElement("br"))
+// })
 
-selected.addEventListener("click",(monsterName) => {
-  result = monsterList.find(({name}) => name === `${monsterName.target.innerHTML}`)
+// dropMenu.addEventListener("change",(e) => {
+//     let li = document.createElement("li")
+//     li.className = "monster-name"
+//     li.innerHTML = e.target.value
+//     selected.appendChild(li)
+// })
+
+const createCard = (result) => {
   let div = document.createElement("div")
   div.className = "container"
   let images = document.createElement("img")
@@ -51,7 +70,21 @@ selected.addEventListener("click",(monsterName) => {
   div.appendChild(actions)
   div.appendChild(diceLiker)
   imageContainer.append(document.createElement("br"))
+}
+
+dropMenu.addEventListener("change",(e) => {
+  result = monsterList.find(({name}) => name === `${e.target.value}`)
+  createCard(result)
 })
+
+const beholderCard = document.querySelector(".beholder")
+
+beholderCard.addEventListener("dblclick",() => {
+  bugbearObj = monsterList[58]
+  createCard(bugbearObj)
+})
+
+
 
 imageContainer.addEventListener('click', function (e) {
   if (e.target.classList.contains('empty-heart')) {
